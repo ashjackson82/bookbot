@@ -6,10 +6,11 @@ def count_char(text):
     char = {}
     for letter in text:
         letter_lower = letter.lower()
-        if letter_lower in char:
-            char[letter_lower] += 1
-        else:
-            char[letter_lower] = 1
+        if letter_lower.isalpha():
+            if letter_lower in char:
+              char[letter_lower] += 1
+            else:
+                char[letter_lower] = 1
     return char
 
 def sort_char_counts(char_dict):
